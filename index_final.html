@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Produto TikTok Completo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style>
+* { box-sizing: border-box; }
+body { margin:0; font-family:-apple-system,Arial; background:#fff; }
+
+/* HERO */
+.hero { position:relative; overflow:hidden; }
+.hero-track {
+  display:flex; overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+}
+.hero-slide { flex:0 0 100%; scroll-snap-align:center; }
+.hero-slide img { width:100%; display:block; }
+.hero-counter{
+  position:absolute; bottom:10px; right:10px;
+  background:rgba(0,0,0,.6); color:#fff;
+  padding:4px 10px; border-radius:12px; font-size:12px;
+}
+
+/* SECTION */
+.section{ padding:15px; border-bottom:1px solid #eee; }
+.discount{ background:#ff0a6c; padding:6px 10px; border-radius:6px; color:#fff; font-size:14px; display:inline-block; }
+.price{ font-size:28px; font-weight:700; color:#ff0a6c; }
+.old{ text-decoration:line-through; margin-left:8px; color:#888; }
+.installments{ margin-top:5px; color:#444; }
+
+/* VARIANTS */
+.variant-title{ font-size:14px; font-weight:600; margin-bottom:6px; }
+.variants{ display:flex; gap:10px; }
+.variant{
+  flex:1; border:1px solid #ddd; border-radius:10px;
+  padding:8px; text-align:center; font-size:12px;
+  cursor:pointer;
+}
+.variant img{ width:100%; border-radius:8px; margin-bottom:4px; }
+.variant.active{ border:2px solid #ff0a6c; }
+
+/* CTA */
+.bottom-bar{
+  position:fixed; bottom:0; left:0; width:100%;
+  background:#fff; padding:10px;
+  box-shadow:0 -3px 10px rgba(0,0,0,.1);
+  display:flex; gap:10px;
+}
+.btn{ flex:1; padding:12px; text-align:center;
+  border-radius:20px; font-weight:600; cursor:pointer; }
+.btn-secondary{ border:1px solid #ccc; background:#fff; }
+.btn-primary{ background:#ff0a6c; color:#fff; }
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-track" id="hero">
+    <div class="hero-slide"><img src="img1.png"></div>
+    <div class="hero-slide"><img src="img2.png"></div>
+    <div class="hero-slide"><img src="img3.png"></div>
+    <div class="hero-slide"><img src="img4.png"></div>
+    <div class="hero-slide"><img src="img5.png"></div>
+    <div class="hero-slide"><img src="img6.png"></div>
+    <div class="hero-slide"><img src="img7.png"></div>
+    <div class="hero-slide"><img src="img8.png"></div>
+    <div class="hero-slide"><img src="img9.png"></div>
+  </div>
+  <div class="hero-counter" id="count">1/9</div>
+</div>
+
+<!-- PRICE -->
+<div class="section">
+  <div class="discount">-35% • A partir de R$ 89,90</div>
+  <div><span class="price">R$ 89,90</span><span class="old">R$138,81</span></div>
+  <div class="installments">2x de R$ 44,09 sem juros</div>
+  <div class="installments" style="color:#00b800;font-weight:600;">Frete grátis</div>
+</div>
+
+<!-- VARIANTES -->
+<div class="section">
+  <div class="variant-title">Escolha a cor:</div>
+  <div class="variants">
+    <div class="variant active" onclick="selectVariant('variant_black.png', this)">
+      <img src="variant_black.png"><br>Preto
+    </div>
+    <div class="variant" onclick="selectVariant('variant_red.png', this)">
+      <img src="variant_red.png"><br>Vermelho
+    </div>
+    <div class="variant" onclick="selectVariant('variant_white.png', this)">
+      <img src="variant_white.png"><br>Branco
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="bottom-bar">
+  <div class="btn btn-secondary">Adicionar ao carrinho</div>
+  <div class="btn btn-primary">Comprar agora</div>
+</div>
+
+<script>
+// hero counter
+const hero=document.getElementById("hero");
+const count=document.getElementById("count");
+hero.addEventListener("scroll",()=>{
+  const w=hero.clientWidth;
+  const i=Math.round(hero.scrollLeft/w);
+  count.textContent=(i+1)+"/9";
+});
+
+// variant selector
+function selectVariant(src, el){
+  document.querySelectorAll(".variant").forEach(v=>v.classList.remove("active"));
+  el.classList.add("active");
+  document.querySelector(".hero-slide img").src = src;
+}
+</script>
+
+</body>
+</html>
