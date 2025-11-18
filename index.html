@@ -224,7 +224,6 @@
       font-weight: 600;
     }
 
-    /* VARIANTES */
     .variants {
       display: flex;
       gap: 10px;
@@ -250,6 +249,207 @@
       box-shadow: 0 0 0 1px #ff146e;
     }
 
+    .protection-box {
+      background: #fff7e6;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .h-scroll {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .video-card {
+      min-width: 120px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #000;
+      color: #fff;
+      font-size: 11px;
+      position: relative;
+    }
+    .video-card img {
+      width: 100%;
+      display: block;
+    }
+    .video-badge {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      background: rgba(0,0,0,0.7);
+      padding: 2px 6px;
+      border-radius: 10px;
+      font-size: 10px;
+    }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .reviews-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .review-card {
+      border-radius: 10px;
+      border: 1px solid #f0f0f0;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+    .review-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #ddd;
+    }
+    .review-name {
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .review-meta {
+      font-size: 11px;
+      color: #777;
+    }
+    .review-photos {
+      display: flex;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .review-photos img {
+      width: 24%;
+      border-radius: 6px;
+    }
+
+    .store-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 10px;
+      border-radius: 10px;
+      border: 1px solid #f0f0f0;
+      margin-top: 6px;
+    }
+    .store-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .store-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #ffde00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .store-name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .store-meta {
+      font-size: 11px;
+      color: #777;
+    }
+    .store-btn {
+      padding: 6px 12px;
+      border-radius: 16px;
+      border: 1px solid #111;
+      font-size: 12px;
+    }
+
+    .product-card {
+      min-width: 150px;
+      border-radius: 10px;
+      border: 1px solid #f0f0f0;
+      padding: 8px;
+      font-size: 12px;
+      background: #fff;
+    }
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 6px;
+    }
+    .product-price {
+      color: #ff146e;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .badge-small {
+      font-size: 11px;
+      padding: 2px 5px;
+      border-radius: 4px;
+      background: #ffe6f1;
+      color: #ff146e;
+      display: inline-block;
+      margin-top: 2px;
+    }
+
+    .bottom-bar-wrap {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 -3px 10px rgba(0,0,0,0.08);
+      z-index: 60;
+    }
+    .bottom-bar {
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 8px;
+      font-size: 11px;
+    }
+    .bottom-icon-col {
+      width: 52px;
+      text-align: center;
+      color: #555;
+    }
+    .bottom-icon {
+      font-size: 18px;
+      margin-bottom: 2px;
+    }
+    .bottom-btn-secondary,
+    .bottom-btn-primary {
+      flex: 1;
+      text-align: center;
+      padding: 10px 6px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .bottom-btn-secondary {
+      background: #fff;
+      border: 1px solid #ddd;
+      color: #111;
+    }
+    .bottom-btn-primary {
+      background: #ff146e;
+      border: none;
+      color: #fff;
+    }
   </style>
 </head>
 
@@ -268,30 +468,36 @@
     </div>
   </div>
 
-  <!-- HERO CARROSSEL -->
+  <!-- HERO CARROSSEL (7 imagens) -->
   <div class="hero">
     <div class="hero-track" id="heroTrack">
 
       <div class="hero-slide">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/04a7f76ac3534a7e8d564dcf630692b8~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/04a7f76ac3534a7e8d564dcf630692b8~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
       </div>
+
       <div class="hero-slide">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/eddc5f8e08514b26b45da60083b9c7bc~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/eddc5f8e08514b26b45da60083b9c7bc~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
       </div>
+
       <div class="hero-slide">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/cf695ee4f03e4f52849a2af5e62bdf81~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/cf695ee4f03e4f52849a2af5e62bdf81~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
       </div>
+
       <div class="hero-slide">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/68608f87d6c642aab65616c18a7fbe70~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/68608f87d6c642aab65616c18a7fbe70~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
       </div>
+
       <div class="hero-slide">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/3856cb75d7bc4a96a827f6990eca919e~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/3856cb75d7bc4a96a827f6990eca919e~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
       </div>
+
       <div class="hero-slide">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/3ad0fbeabcd845f2b091b251a22fbcf4~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/3ad0fbeabcd845f2b091b251a22fbcf4~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
       </div>
+
       <div class="hero-slide">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/96dc16656b0b45338c6442a31238eda5~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/96dc16656b0b45338c6442a31238eda5~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
       </div>
 
     </div>
@@ -323,18 +529,36 @@
     </div>
   </div>
 
-  <!-- Variantes COR -->
+  <!-- Strip afiliado -->
+  <div class="strip">
+    <div class="strip-left">
+      <span class="strip-pill">🔥 3.8K vendidos no mês passado</span>
+      <span>Ganhe <span class="strip-highlight">R$ 0,88</span> por venda</span>
+      <span style="color:#777;">1% comissão</span>
+    </div>
+    <div class="strip-right">
+      🎁 Amostra<br>reembolsável
+    </div>
+  </div>
+
+  <!-- Abas -->
+  <div class="tab-bar">
+    <div class="tab active">Visão geral</div>
+    <div class="tab">Avaliações</div>
+    <div class="tab">Descrição</div>
+    <div class="tab">Recomendações</div>
+  </div>
+
+  <!-- Visão geral -->
   <div class="section">
     <div class="product-title">
       Liquidificador Mondial L-99 Turbo 3 Velocidades 550W
     </div>
-
     <div class="rating-line">
       <span class="stars">★★★★☆</span>
       <span>4,8 (2,4 mil)</span>
       <span>• 130,2K vendidos on-line</span>
     </div>
-
     <div class="shipping" style="margin-top:8px;">
       Receba entre <strong>21–28 de nov</strong><br>
       <span class="green">Frete grátis</span>
@@ -346,7 +570,7 @@
 
     <div class="variants" id="variants">
       <div class="variant active" data-color="preto">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/04a7f76ac3534a7e8d564dcf630692b8~tplv-o3syd03w52-resize-webp:800:800.webp" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/04a7f76ac3534a7e8d564dcf630692b8~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
         Preto
       </div>
       <div class="variant" data-color="vermelho">
@@ -359,15 +583,7 @@
       </div>
     </div>
 
-    <!-- ✔ VARIANTES DE VOLTAGEM ADICIONADAS AQUI -->
-    <div style="margin-top:20px; font-size:13px;">
-      <strong>Escolha a voltagem</strong>
-    </div>
-
-    <div class="variants" id="variants-voltagem">
-      <div class="variant active" data-volt="220v">220V</div>
-      <div class="variant" data-volt="127v">127V</div>
-       <div style="margin-top:20px;">
+    <div style="margin-top:12px;">
       <div class="protection-box">
         <strong>Proteção do cliente</strong><br>
         • Devolução gratuita<br>
@@ -383,15 +599,15 @@
     <div class="section-title">Vídeos de criadores (30+)</div>
     <div class="h-scroll">
       <div class="video-card">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/96dc16656b0b45338c6442a31238eda5~tplv-o3syd03w52-resize-webp:800:800.webp" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/96dc16656b0b45338c6442a31238eda5~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
         <div class="video-badge">Review</div>
       </div>
       <div class="video-card">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/3856cb75d7bc4a96a827f6990eca919e~tplv-o3syd03w52-resize-webp:800:800.webp" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/3856cb75d7bc4a96a827f6990eca919e~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
         <div class="video-badge">Receita</div>
       </div>
       <div class="video-card">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/cf695ee4f03e4f52849a2af5e62bdf81~tplv-o3syd03w52-resize-webp:800:800.webp" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/cf695ee4f03e4f52849a2af5e62bdf81~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
         <div class="video-badge">Demonstração</div>
       </div>
     </div>
@@ -420,9 +636,9 @@
         Minha primeira compra no TikTok, chegou certinho, funcionando perfeitamente!!!
       </div>
       <div class="review-photos">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/04a7f76ac3534a7e8d564dcf630692b8~tplv-o3syd03w52-resize-webp:800:800.webp" alt="">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/cf695ee4f03e4f52849a2af5e62bdf81~tplv-o3syd03w52-resize-webp:800:800.webp" alt="">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/3856cb75d7bc4a96a827f6990eca919e~tplv-o3syd03w52-resize-webp:800:800.webp" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/04a7f76ac3534a7e8d564dcf630692b8~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/cf695ee4f03e4f52849a2af5e62bdf81~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/3856cb75d7bc4a96a827f6990eca919e~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
       </div>
     </div>
 
@@ -439,8 +655,8 @@
         Gostei do liquidificador, chegou rapidinho, só veio violada a caixa mas chegou tudo certo 👍
       </div>
       <div class="review-photos">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/68608f87d6c642aab65616c18a7fbe70~tplv-o3syd03w52-resize-webp:800:800.webp" alt="">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/cf695ee4f03e4f52849a2af5e62bdf81~tplv-o3syd03w52-resize-webp:800:800.webp" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/68608f87d6c642aab65616c18a7fbe70~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/cf695ee4f03e4f52849a2af5e62bdf81~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
       </div>
     </div>
   </div>
@@ -465,7 +681,7 @@
     </div>
   </div>
 
-  <!-- Sobre este produto -->
+  <!-- Sobre -->
   <div class="section">
     <div class="section-title">Sobre este produto</div>
     <p style="font-size:13px;line-height:1.5;">
@@ -476,13 +692,12 @@
 
     <div class="h-scroll" style="margin-top:8px;">
       <div class="product-card" style="min-width:180px;">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/eddc5f8e08514b26b45da60083b9c7bc~tplv-o3syd03w52-resize-webp:800:800.webp" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/eddc5f8e08514b26b45da60083b9c7bc~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
         <div><strong>Potência 550W</strong></div>
         <div>Mais força para triturar alimentos duros.</div>
       </div>
-
       <div class="product-card" style="min-width:180px;">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/3ad0fbeabcd845f2b091b251a22fbcf4~tplv-o3syd03w52-resize-webp:800:800.webp" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/3ad0fbeabcd845f2b091b251a22fbcf4~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
         <div><strong>Lâminas em inox</strong></div>
         <div>Cortes precisos, não enferruja e é fácil de limpar.</div>
       </div>
@@ -494,14 +709,13 @@
     <div class="section-title">Você também pode gostar</div>
     <div class="h-scroll">
       <div class="product-card">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/04a7f76ac3534a7e8d564dcf630692b8~tplv-o3syd03w52-resize-webp:800:800.webp" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/04a7f76ac3534a7e8d564dcf630692b8~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
         <div>Liquidificador 3 velocidades 550W</div>
         <div class="product-price">R$ 99,90</div>
         <div class="badge-small">-24%</div>
       </div>
-
       <div class="product-card">
-        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/3856cb75d7bc4a96a827f6990eca919e~tplv-o3syd03w52-resize-webp:800:800.webp" alt="">
+        <img src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/3856cb75d7bc4a96a827f6990eca919e~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393" alt="">
         <div>Copo p/ liquidificador</div>
         <div class="product-price">R$ 42,72</div>
         <div style="margin-top:2px;">
@@ -548,7 +762,7 @@
   const slides = document.querySelectorAll('.hero-slide');
   const counter = document.getElementById('heroCounter');
   const dots = document.querySelectorAll('#heroDots .hero-dot');
-  const totalSlides = slides.length; 
+  const totalSlides = slides.length; // 7
 
   function updateHeroState() {
     const width = track.clientWidth;
@@ -566,20 +780,11 @@
   window.addEventListener('resize', updateHeroState);
   window.addEventListener('load', updateHeroState);
 
-  // Seleção de variantes COR
-  const variantEls = document.querySelectorAll('#variants .variant');
+  // Seleção de variantes (só visual)
+  const variantEls = document.querySelectorAll('.variant');
   variantEls.forEach(v => {
     v.addEventListener('click', () => {
       variantEls.forEach(x => x.classList.remove('active'));
-      v.classList.add('active');
-    });
-  });
-
-  // Seleção de VOLTAGEM
-  const voltEls = document.querySelectorAll('#variants-voltagem .variant');
-  voltEls.forEach(v => {
-    v.addEventListener('click', () => {
-      voltEls.forEach(x => x.classList.remove('active'));
       v.classList.add('active');
     });
   });
